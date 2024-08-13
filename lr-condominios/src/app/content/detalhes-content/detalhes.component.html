@@ -1,0 +1,19 @@
+<section class="detalhes-container">
+  <h3>{{ info.mes }}</h3>
+  <main class="detalhes">
+    <div class="detalhes-titles">
+      <h5>Agua</h5>
+      <h5>luz</h5>
+      <h5>Gás</h5>
+      <h5>Serviços Gerais</h5>
+    </div>
+    <div class="detalhes-info">
+      <p>R$:{{ info.agua }}</p>
+      <p>R$:{{ info.luz }}</p>
+      <p>R$:{{ info.gas }}</p>
+      <p>R$:{{ info.servicosGerais }}</p>
+    </div>
+  </main>
+
+  <button (click)="fechar.emit()">Fechar</button>
+</section>

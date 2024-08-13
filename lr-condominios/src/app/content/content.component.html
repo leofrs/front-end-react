@@ -1,0 +1,38 @@
+<div class="page-container">
+  <app-header></app-header>
+  <main class="content-container">
+    <div class="content">
+      <h2>Informações de 2024</h2>
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th class="table-header">Ano</th>
+            <th class="table-header">Mês</th>
+            <th class="table-header">Status</th>
+            <th class="table-header">Saldo</th>
+            <th class="table-header">Detalhes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let info of data">
+            <td>{{ info.ano }}</td>
+            <td>{{ info.mes }}</td>
+            <td>{{ info.status }}</td>
+            <td>{{ info.saldo }}</td>
+            <td><button (click)="mostrarDetalhes(info)">Detalhes</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        * Para obter mais detalhes sobre cada mês, clique no botão "Detalhes"
+      </p>
+    </div>
+  </main>
+
+  <div *ngIf="detalhesVisiveis">
+    <app-detalhes
+      [info]="detalhesInfo"
+      (fechar)="fecharDetalhes()"
+    ></app-detalhes>
+  </div>
+</div>

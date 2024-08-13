@@ -1,0 +1,24 @@
+<nav>
+  <ul>
+    <li>
+      Arquivos
+      <ul class="drop-menu">
+        <li>
+          <a routerlink="#">Ano</a>
+          <ul class="drop-menu-two">
+            <li>
+              <a
+                routerLink="/content"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                >2024</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <button (click)="logout()">Sair</button>
+</nav>
